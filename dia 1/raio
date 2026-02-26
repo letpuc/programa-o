@@ -2,13 +2,12 @@
 
 int main()
 {
-    float r, c, a;
+    float r;
     scanf("%f", &r);
-    c = 2*3.14*r;
-    a = 3.14*r*r;
+    float pi = 3.14;
 
-    printf("o valor de c: %f\n", c);
-    printf("o valor de a: %f", a);
+    printf("o valor de c: %f\n", 2*pi*r);
+    printf("o valor de a: %f", pi*r*r);
 
     return 0;
 
