@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int c, f;
+    printf("qual o valor de c?\n");
+    scanf("%d", &c);
+    f = (9*c)/5+32;
+
+    printf("o valor de c em f eh: %d\n", f);
+
+    return 0;
+
+    }
+
