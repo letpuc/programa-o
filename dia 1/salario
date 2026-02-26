@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+    float s, t, r;
+    scanf("%f %f", &s, &t);
+    printf("o salario total dele eh: %f", s+0.15*t);
+
+    return 0;
+    }
