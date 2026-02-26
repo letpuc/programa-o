@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+    float t, v, k;
+    scanf("%f %f", &t, &v);
+    k = t*v;
+    printf("km rodados: %f", k);
+    printf("litros necessarios para a viagem: %f3", k/12);
+
+
+    return 0;
+    }
