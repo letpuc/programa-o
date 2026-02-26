@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    //leitura das variaveis
+    printf("valor de a:");
+    scanf("%d", &a);
+    printf("valor de b:");
+    scanf("%d", &b);
+
+    // a é igual a b?
+    if (a==b) {
+        printf("sim\n");
+    } else {
+        printf("nao\n");
+    }
+
+    //a*b é menor que 100?
+    if ((a*b)<100) {
+         printf("sim\n");
+    } else {
+        printf("nao\n");
+    }
+
+    // o triplo de a é maior do que b
+    if ((a*3)>b) {
+         printf("sim\n");
+    } else {
+        printf("nao\n");
+    }
+
+    // a ou b é maior do que 0
+    if (a||b > 0) {
+         printf("sim\n");
+    } else {
+        printf("nao\n");
+    }
+
+    // os dois sao simultaneamente negativos
+    if (a&&b < 0) {
+         printf("sim\n");
+    } else {
+        printf("nao\n");
+    }
+
+    // algum dos dois é impar?
+    if ((a % 2 != 0) || (b % 2 != 0)) {
+         printf("sim\n");
+    } else {
+        printf("nao\n");
+    }
+
+    // qual o menor entre os dois numeros?
+    if (a < b) {
+         printf("%d", a);
+    } else {
+        printf("%d", b);
+    }
+
+    return 0;
+    }
