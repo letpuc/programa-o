@@ -1,0 +1,41 @@
+#include <stdio.h>
+float media (float notas [], int tamanho){
+    float soma, median;
+    for (int i=0; i<tamanho; i++){
+        soma += notas [i];
+    }
+    median = soma / tamanho;
+
+    return median;
+}
+
+int main()
+{
+    int x, y;
+    scanf("%d %d", &x, &y);
+    float notas [x][y];
+
+    for (int i=0; i<x; i++){
+        for (int j=0; j<y; j++){
+            scanf("%f", &notas[i][j]);
+        }
+    }
+
+    float mediaA[x];
+    for (int i=0; i<x; i++) {
+
+        mediaA[i]= media (notas[i], y);
+    }
+
+    float mediaT = media (mediaA, x);
+
+    for (int i = 0; i <x; i++){
+        if (mediaA[i]>=6){
+            printf("esse aluno foi aprovado e sua media eh %f\n", mediaA[i]);
+        }else{
+            printf("nao foi aprovado e media %f \n", mediaA[i]);
+        }
+    }
+    printf("a media da turma foi %f", mediaT);
+    return 0;
+    }
