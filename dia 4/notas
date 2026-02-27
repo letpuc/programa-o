@@ -2,27 +2,35 @@
 float mediaVet (float notas [], int tamanho){
     float soma = 0;
     float media;
-    
+
     for (int i = 0; i < tamanho; i++){
         soma += notas[i];
     }
-    
+
     media = soma / tamanho;
     return media;
 }
 
+int menor3 (float notas [], int tamanho ) {
+    for (int i = 0; i < tamanho; i++){
+        if (notas[i] <= 3)
+            return 1; }
+    return 0;
+}
+
+
 int main()
 {
     int x, y;
-    
+
     printf("Quantos alunos tem na turma: ");
     scanf("%d", &x);
-    
+
     printf("Quantas avaliacoes foram feitas: ");
     scanf("%d", &y);
-    
+
     float notas [x][y];
-    
+
     for (int i = 0; i < x; i++){
         printf("Notas do aluno %d: ", i+1);
         for (int j = 0; j < y; j++){
@@ -31,29 +39,25 @@ int main()
     }
 
     float mediaA[x];
-    
+
     for (int i = 0; i < x; i++) {
         mediaA[i]= mediaVet(notas[i], y);
     }
 
     float mediaT = mediaVet(mediaA, x);
 
+
     for (int i = 0; i < x; i++){
         // ver se tem nota menor ou igual a 3
-        int menor3 = 0;
-        for (int j = 0; j < y; j++){
-            if (notas[i][j] <= 3){
-                menor3 = 1;
-            }
-        }
-        if (mediaA[i] >= 6 && menor3 == 0){
+
+        if (mediaA[i] >= 6 && menor3(notas [i], y) == 0){
             printf("Aluno %d foi aprovado com media %.2f\n", i+1, mediaA[i]);
         }else{
             printf("Aluno %d reprovou com media %.2f\n", i+1, mediaA[i]);
         }
     }
-    
+
     printf("A media da turma foi %.2f", mediaT);
-    
+
     return 0;
 }
