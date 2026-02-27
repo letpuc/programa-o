@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    //receba numeros inteiros
+    int a, b, c;
+    printf("Insira 3 numeros inteiros: ");
+    scanf("%d", &a, &b, &c);
+    
+    //imprima se há números repetidos
+    if (a==b==c){
+        printf("sim\n");
+    } else {
+        printf("nao\n");
+    }
+    
+    // se nao tiver numeros repetidos, imprima o maior
+    if (a==b==c){
+        printf("sim\n");
+    } else if {
+        printf("nao\n");
+    }
+    
+    return 0;
+}
